@@ -1,0 +1,8 @@
+@use "../styles/variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: $light-gray;
+    scrollbar-width: thin;
+}

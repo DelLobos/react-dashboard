@@ -1,0 +1,47 @@
+@use "../../styles/variables" as *;
+
+.patient-info-container {
+  width: 100%;
+  max-width: 367px;
+  padding: $padding-16;
+  padding-top: 30px;
+  margin-bottom: 24px;
+  background-color: white;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-default;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  h2 {
+    @include h2-styles;
+  }
+
+  .icon-wrap {
+    width: 42px;
+    height: 42px;
+    background-color: rgb(246, 247, 248);
+    color: $main-font-color;
+
+    .icon {
+      font-size: $font-size-lg;
+      color: $main-font-color;
+    }
+  }
+
+  button {
+    max-width: 220px;
+    padding: 10px 0;
+    background-color: $main-active-button-background-color;
+    color: $main-button-color;
+    font-size: $main-button-font-size;
+
+    &:hover {
+      background-color: $main-button-hover-background-color;
+      cursor: pointer;
+    }
+  }
+}

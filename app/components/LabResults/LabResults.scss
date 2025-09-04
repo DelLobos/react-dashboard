@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.lab-results-container {
+  width: 100%;
+  padding: $padding-16;
+  background-color: $row-hover-background;
+  border-radius: $border-radius-lg;
+  background: $white;
+
+  h2 {
+    @include h2-styles;
+  }
+
+  .text-base {
+    font-size: $font-size-md-sm;
+  }
+
+  .lab-results {
+    scrollbar-width: thin;
+
+    .lab-result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s;
+      padding: 0 8px;
+
+      &:hover {
+        background: $row-hover-background;
+        cursor: pointer;
+      }
+
+      button {
+        padding: 0.5rem;
+        border: none;
+        background: transparent;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@use "../../styles/variables" as *;
+
+.main-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  font-size: $font-size-default;
+  color: $main-font-color;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    .logo-img {
+      width: 100%;
+      height: auto;
+      max-width: 210px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: $main-button-font-size;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+
+      &--active {
+        background: $main-active-button-background-color;
+        font-weight: 600;
+
+        &:hover {
+          background: $main-button-hover-background-color;
+        }
+      }
+
+      &:hover:not(.nav-link--active) {
+        background: #e6f7f5;
+      }
+
+      .nav-icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.5rem;
+
+    .profile-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid $light-gray;
+      padding-right: 8px;
+      .profile-name {
+        font-weight: 700;
+      }
+      .profile-role {
+        color: $gray;
+      }
+    }
+    .profile-icon {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+  }
+}
