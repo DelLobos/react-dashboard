@@ -1,0 +1,54 @@
+@use "sass:color";
+@use "sass:map";
+
+$border-radius-lg: 16px;
+
+$padding-16: 16px;
+
+// Typography
+$h2: (
+  font-size: 24px,
+  font-weight: 700,
+  margin-bottom: 32px
+);
+
+// Mixin for h2 styles
+@mixin h2-styles {
+  font-size: map.get($h2, font-size);
+  font-weight: map.get($h2, font-weight);
+  margin-bottom: map.get($h2, margin-bottom);
+}
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+$gray: #707070;
+$light-gray: #f6f7f8;
+$main-font-color: #072635;
+
+// Vitals Colors
+$blood-pressure-color: #e17be3;
+$blood-pressure-background: #f4f0fe;
+$blood-diastolic-color: #7b7be3;
+
+// Row Backgrounds
+$row-hover-background: #f6f7f8;
+$row-active-background: #d6faf7;
+
+// Font Sizes
+$font-size-very-lg: 30px;
+$font-size-lg: 20px;
+$font-size-md-lg: 16px;
+$font-size-default: 14px;
+$font-size-md-sm: 13px;
+
+// Button Styles
+$main-active-button-background-color: #00e6d0;
+$main-button-color: black;
+$main-button-font-size: 14px;
+$main-button-hover-background-color: color.adjust($main-active-button-background-color, $lightness: -5%);
+
+// Vitals Widget
+$respiratory-bg: #e6f6fb;
+$temperature-bg: #ffe6ea;
+$heart-bg: #ffe6f4;

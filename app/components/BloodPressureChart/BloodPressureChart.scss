@@ -1,0 +1,116 @@
+@use "../../styles/variables" as *;
+
+.blood-pressue-history-container {
+  width: 100%;
+  padding: $padding-16;
+  margin: 16px 0;
+  background-color: $blood-pressure-background;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-default;
+
+  .blood-pressue-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .blood-pressue-history-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .blood-pressue-history-range {
+    color: $main-font-color;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      margin-left: 16px;
+    }
+  }
+
+  .blood-pressue-history-dropdown {
+    font-size: 1.1em;
+  }
+
+  .blood-pressue-history-content {
+    display: flex;
+  }
+
+  .blood-pressue-history-chart {
+    // flex: 2;
+    width: 70%;
+  }
+
+  .blood-pressue-history-stats {
+    flex: 1;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .blood-pressue-history-stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .blood-pressue-history-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+
+    &.systolic {
+      background: $blood-pressure-color;
+    }
+    &.diastolic {
+      background: $blood-diastolic-color;
+    }
+  }
+
+  .blood-pressue-history-label {
+    color: $main-font-color;
+    font-weight: 600;
+  }
+
+  .blood-pressue-history-value {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+  .blood-pressue-history-meta {
+    color: $main-font-color;
+    font-size: $font-size-default;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &.higher .blood-pressue-history-arrow {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    &.lower .blood-pressue-history-arrow {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+
+  .blood-pressue-history-divider {
+    border: none;
+    border-top: 1px solid #d6d6d6;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../styles/variables" as *;
+
+.home-dashboard {
+  max-width: 1600px;
+  min-width: 850px;
+  width: 100%;
+  padding: $padding-16;
+  color: $main-font-color;
+  font-size: $font-size-default;
+
+  &__content {
+    width: 100%;
+
+    &__column {
+      width: 100%;
+      padding: 12px;
+
+      &.patients {
+        width: 25%;
+      }
+
+      &.diagnostics {
+        width: 50%;
+      }
+
+      &.profile-labs {
+        width: 25%;
+      }
+
+      &.patients-info {
+        width: 33%;
+      }
+
+      &.diagnostics-info {
+        width: 66%;
+      }
+    }
+  }
+}

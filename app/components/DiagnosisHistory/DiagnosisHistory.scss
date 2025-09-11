@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.diagnosis-history-container {
+  width: 100%;
+  padding: $padding-16;
+  margin-bottom: 24px;
+  background-color: white;
+  border-radius: $border-radius-lg;
+
+  h2 {
+    @include h2-styles;
+  }
+}

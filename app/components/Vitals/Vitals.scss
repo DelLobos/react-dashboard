@@ -1,0 +1,66 @@
+@use "../../styles/variables" as *;
+
+.vitals-container {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+
+  .vital-card {
+    width: 100%;
+    flex: 1 1 0; 
+    height: auto;
+    background: #e6f6fb;
+    border-radius: $border-radius-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+
+    &:last-child {
+      margin-left: 16px;
+    }
+
+    img {
+      max-width: 96px;
+    }
+
+    &.temperature {
+      background: #ffe6ea;
+    }
+    &.heart {
+      background: #ffe6f4;
+    }
+  }
+
+  .vital-icon {
+    margin-bottom: 8px;
+  }
+
+  .vital-label {
+    font-size: $font-size-md-lg;
+  }
+
+  .vital-value {
+    font-size: $font-size-very-lg;
+    font-weight: 700;
+  }
+
+  .vital-status {
+    font-size: $font-size-default;
+    color: $main-font-color;
+    margin-top: 2px;
+
+    .vital-status-info {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}
