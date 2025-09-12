@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./HomeDashboard.scss";
 import { Patients } from "~/components/Patients/Patients";
 import { DiagnosisHistory } from "~/components/DiagnosisHistory/DiagnosisHistory";
-import { fetchPatients } from "~/api/patientsApi";
+import { fetchPatients } from "~/api/patientsAPI";
 import type { Patient } from "~/types/patient.type";
 import { DiagnosticList } from "~/components/DiagnosticList/DiagnosticList";
 import { PatientInfo } from "~/components/PatientInfo/PatientInfo";
