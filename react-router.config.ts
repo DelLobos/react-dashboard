@@ -6,4 +6,6 @@ export default {
   ssr: false, // Enable SPA mode for GitHub Pages
   // Add prerender configuration for static generation
   prerender: ["/"], // Prerender the home page
+  // Set the basename for GitHub Pages
+  basename: "/react-dashboard",
 } satisfies Config;
