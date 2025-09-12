@@ -1,6 +1,7 @@
 import React from "react";
 import "./LabResults.scss";
 import type { Patient } from "~/types/patient.type";
+import { getAssetPath } from "../../utils/assetPath";
 
 type LabResultsProps = {
   patient: Patient | null;
@@ -18,7 +19,7 @@ export function LabResults({ patient }: LabResultsProps) {
             <span className="text-base">{result}</span>
             <button aria-label={`Download ${result}`}>
               <img
-                src={getAssetPath("/images/download-icon.svg"
+                src={getAssetPath("/images/download-icon.svg")}
                 alt={`Download ${result}`}
                 className="icon"
               />
