@@ -6,4 +6,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   base: '/react-dashboard/', // Replace with your actual repo name
+  // Ensure public assets are served correctly
+  publicDir: 'public',
 });
