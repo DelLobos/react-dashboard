@@ -7,49 +7,49 @@ export function MainNavigation({ isTablet }: { isTablet: boolean }) {
   return (
     <nav className="main-navigation">
       <div className="main-navigation__logo">
-        <img src="/images/TestLogo.svg" alt="Tech.Care Logo" className="logo-img" />
+        <img src={getAssetPath("/images/TestLogo.svg")} alt="Tech.Care Logo" className="logo-img" />
       </div>
       <ul className="main-navigation__links">
         <li>
           <a href="#" className="nav-link">
-            <img src="/images/home-icon.svg" alt="Home" className="nav-icon" />
+            <img src={getAssetPath("/images/home-icon.svg")} alt="Home" className="nav-icon" />
             Overview
           </a>
         </li>
         <li>
           <a href="#" className="nav-link nav-link--active">
-            <img src="/images/patients-icon.svg" alt="Patients" className="nav-icon" />
+            <img src={getAssetPath("/images/patients-icon.svg")} alt="Patients" className="nav-icon" />
             Patients
           </a>
         </li>
         <li>
           <a href="#" className="nav-link">
-            <img src="/images/calendar-icon.svg" alt="Schedule" className="nav-icon" />
+            <img src={getAssetPath("/images/calendar-icon.svg")} alt="Schedule" className="nav-icon" />
             Schedule
           </a>
         </li>
         <li>
           <a href="#" className="nav-link">
-            <img src="/images/chat-icon.svg" alt="Message" className="nav-icon" />
+            <img src={getAssetPath("/images/chat-icon.svg")} alt="Message" className="nav-icon" />
             Message
           </a>
         </li>
         <li>
             <a href="#" className="nav-link">
-            <img src="/images/credit-card-icon.svg" alt="Credit card" className="nav-icon" />
+            <img src={getAssetPath("/images/credit-card-icon.svg")} alt="Credit card" className="nav-icon" />
             Transactions
             </a>
         </li>
       </ul>
       <div className="main-navigation__profile">
-        <img src="/images/doctor.png" alt="Dr. Jose Simmons" className="profile-img" />
+        <img src={getAssetPath("/images/doctor.png")} alt="Dr. Jose Simmons" className="profile-img" />
         {!isTablet && (
           <div className="profile-info">
             <span className="profile-name">Dr. Jose Simmons</span>
             <span className="profile-role">General Practitioner</span>
           </div>
 )}
-        <img src="/images/settings-cog.svg" alt="Settings" className="profile-icon" />
+        <img src={getAssetPath("/images/settings-cog.svg")} alt="Settings" className="profile-icon" />
         <FaEllipsisV className="profile-ellipses" />
       </div>
     </nav>

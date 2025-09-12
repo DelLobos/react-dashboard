@@ -3,6 +3,7 @@ import "./BloodPressureChart.scss";
 import { Line } from "react-chartjs-2";
 import { BloodPressureChartConfig } from "./chartConfig";
 import type { Patient } from "../../types/patient.type";
+import { getAssetPath } from "../../utils/assetPath";
 
 type DiagnosisHistoryProps = {
   patient: Patient | null;
@@ -37,7 +38,7 @@ export function BloodPressureChart({ patient }: DiagnosisHistoryProps) {
               Last 6 months{" "}
               <span className="blood-pressue-history-dropdown">
                 <img
-                  src="/images/expand-icon.svg"
+                  src={getAssetPath("/images/expand-icon.svg")}
                   alt="Expand Date"
                   className="expand-icon"
                 />
@@ -57,8 +58,8 @@ export function BloodPressureChart({ patient }: DiagnosisHistoryProps) {
           <div className="blood-pressue-history-meta higher">
             <span className="blood-pressue-history-arrow">
               {latest.blood_pressure.systolic.levels === "Higher than Average"
-                ? <img src="/images/ArrowDown.svg" alt="Arrow Down" className="icon" />
-                : <img src="/images/ArrowUp.svg" alt="Arrow Up" className="icon" />}
+                ? <img src={getAssetPath("/images/ArrowDown.svg")} alt="Arrow Down" className="icon" />
+                : <img src={getAssetPath("/images/ArrowUp.svg")} alt="Arrow Up" className="icon" />}
             </span>
             {latest.blood_pressure.systolic.levels}
           </div>
@@ -76,8 +77,8 @@ export function BloodPressureChart({ patient }: DiagnosisHistoryProps) {
           <div className="blood-pressue-history-meta lower">
             <span className="blood-pressue-history-arrow">
               {latest.blood_pressure.diastolic.levels === "Lower than Average"
-                ? <img src="/images/ArrowDown.svg" alt="Arrow Down" className="icon" />
-                : <img src="/images/ArrowUp.svg" alt="Arrow Up" className="icon" />}
+                ? <img src={getAssetPath("/images/ArrowDown.svg")} alt="Arrow Down" className="icon" />
+                : <img src={getAssetPath("/images/ArrowUp.svg")} alt="Arrow Up" className="icon" />}
             </span>
             {latest.blood_pressure.diastolic.levels}
           </div>

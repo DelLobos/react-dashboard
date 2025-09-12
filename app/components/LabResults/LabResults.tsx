@@ -18,7 +18,7 @@ export function LabResults({ patient }: LabResultsProps) {
             <span className="text-base">{result}</span>
             <button aria-label={`Download ${result}`}>
               <img
-                src="/images/download-icon.svg"
+                src={getAssetPath("/images/download-icon.svg"
                 alt={`Download ${result}`}
                 className="icon"
               />

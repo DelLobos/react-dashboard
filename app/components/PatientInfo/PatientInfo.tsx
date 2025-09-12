@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import "./PatientInfo.scss";
 import type { Patient } from "~/types/patient.type";
+import { getAssetPath } from "../../utils/assetPath";
 
 type PatientInfoProps = {
   patient: Patient | null;
@@ -27,7 +28,7 @@ export function PatientInfo({ patient }: PatientInfoProps) {
       <div className="w-full flex flex-col gap-5 mb-6">
         <div className="flex items-center gap-4">
           <span className="icon-wrap rounded-full">
-            <img src="/images/BirthIcon.svg" alt="Date of Birth Icon" className="icon" />
+            <img src={getAssetPath("/images/BirthIcon.svg")} alt="Date of Birth Icon" className="icon" />
           </span>
           <div>
             <div>Date Of Birth</div>
@@ -45,7 +46,7 @@ export function PatientInfo({ patient }: PatientInfoProps) {
             {patient.gender.toLowerCase() === "male" ? (
               <FaMars className="icon male" />
             ) : patient.gender.toLowerCase() === "female" ? (
-            <img src="/images/FemaleIcon.svg" alt="Female Icon" className="icon" />
+            <img src={getAssetPath("/images/FemaleIcon.svg")} alt="Female Icon" className="icon" />
             ) : null}
           </span>
           <div>
@@ -55,7 +56,7 @@ export function PatientInfo({ patient }: PatientInfoProps) {
         </div>
         <div className="flex items-center gap-4">
           <span className="icon-wrap rounded-full">
-            <img src="/images/PhoneIcon.svg" alt="Contact Info." className="icon" />
+            <img src={getAssetPath("/images/PhoneIcon.svg")} alt="Contact Info." className="icon" />
           </span>
           <div>
             <div>Contact Info.</div>
@@ -64,7 +65,7 @@ export function PatientInfo({ patient }: PatientInfoProps) {
         </div>
         <div className="flex items-center gap-4">
           <span className="icon-wrap rounded-full">
-            <img src="/images/PhoneIcon.svg" alt="Emergency Contact Info." className="icon" />
+            <img src={getAssetPath("/images/PhoneIcon.svg")} alt="Emergency Contact Info." className="icon" />
           </span>
           <div>
             <div>Emergency Contacts</div>
@@ -73,7 +74,7 @@ export function PatientInfo({ patient }: PatientInfoProps) {
         </div>
         <div className="flex items-center gap-4">
           <span className="icon-wrap rounded-full">
-            <img src="/images/InsuranceIcon.svg" alt="Insurance Provider Info." className="icon" />
+            <img src={getAssetPath("/images/InsuranceIcon.svg")} alt="Insurance Provider Info." className="icon" />
           </span>
           <div>
             <div>Insurance Provider</div>

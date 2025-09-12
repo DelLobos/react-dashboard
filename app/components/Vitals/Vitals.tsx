@@ -1,6 +1,7 @@
 import React from "react";
 import "./Vitals.scss";
 import type { Patient } from "../../types/patient.type";
+import { getAssetPath } from "../../utils/assetPath";
 
 type DiagnosisHistoryProps = {
   patient: Patient | null;
@@ -31,7 +32,7 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
     <div className="vitals-container flex justify-between items-center">
       <div className="vital-card respiratory">
         <div className="vital-icon">
-          <img src="/images/respiratory.png" alt="Respiratory Rate" />
+          <img src={getAssetPath("/images/respiratory.png")} alt="Respiratory Rate" />
         </div>
         <div className="vital-label">Respiratory Rate</div>
         <div className="vital-value">
@@ -48,13 +49,13 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
               .toLowerCase()
               .includes("lower") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowDown.svg" alt="Arrow Down" className="icon" /> Lower than Average
+                <img src={getAssetPath("/images/ArrowDown.svg")} alt="Arrow Down" className="icon" /> Lower than Average
               </div>
             ) : latestEntry.respiratory_rate.levels
                 .toLowerCase()
                 .includes("higher") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowUp.svg" alt="Arrow Up" className="icon" /> Higher than Average
+                <img src={getAssetPath("/images/ArrowUp.svg")} alt="Arrow Up" className="icon" /> Higher than Average
               </div>
             ) : (
               latestEntry.respiratory_rate.levels
@@ -66,7 +67,7 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
       </div>
       <div className="vital-card temperature">
         <div className="vital-icon">
-          <img src="/images/temperature.png" alt="Temperature" />
+          <img src={getAssetPath("/images/temperature.png")} alt="Temperature" />
         </div>
         <div className="vital-label">Temperature</div>
         <div className="vital-value">
@@ -81,13 +82,13 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
           {latestEntry.temperature.levels ? (
             latestEntry.temperature.levels.toLowerCase().includes("lower") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowDown.svg" alt="Arrow Down" className="icon" /> Lower than Average
+                <img src={getAssetPath("/images/ArrowDown.svg")} alt="Arrow Down" className="icon" /> Lower than Average
               </div>
             ) : latestEntry.temperature.levels
                 .toLowerCase()
                 .includes("higher") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowUp.svg" alt="Arrow Up" className="icon" /> Higher than Average
+                <img src={getAssetPath("/images/ArrowUp.svg")} alt="Arrow Up" className="icon" /> Higher than Average
               </div>
             ) : (
               latestEntry.temperature.levels
@@ -99,7 +100,7 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
       </div>
       <div className="vital-card heart">
         <div className="vital-icon">
-          <img src="/images/heartBPM.png" alt="Heart Rate" />
+          <img src={getAssetPath("/images/heartBPM.png")} alt="Heart Rate" />
         </div>
         <div className="vital-label">Heart Rate</div>
         <div className="vital-value">
@@ -113,13 +114,13 @@ export function Vitals({ patient }: DiagnosisHistoryProps) {
           {latestEntry.heart_rate.levels ? (
             latestEntry.heart_rate.levels.toLowerCase().includes("lower") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowDown.svg" alt="Arrow Down" className="icon" /> Lower than Average
+                <img src={getAssetPath("/images/ArrowDown.svg")} alt="Arrow Down" className="icon" /> Lower than Average
               </div>
             ) : latestEntry.heart_rate.levels
                 .toLowerCase()
                 .includes("higher") ? (
               <div className="vital-status-info">
-                <img src="/images/ArrowUp.svg" alt="Arrow Up" className="icon" /> Higher than Average
+                <img src={getAssetPath("/images/ArrowUp.svg")} alt="Arrow Up" className="icon" /> Higher than Average
               </div>
             ) : (
               latestEntry.heart_rate.levels

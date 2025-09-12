@@ -12,5 +12,7 @@ export function getAssetPath(path: string): string {
   }
   
   // In production (GitHub Pages), prepend the base path
-  return `/react-dashboard/${cleanPath}`;
+  // Get base from import.meta.env or use the configured base
+  const base = import.meta.env.BASE_URL || '/react-dashboard/';
+  return `${base}${cleanPath}`;
 }
