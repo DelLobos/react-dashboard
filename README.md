@@ -1,32 +1,69 @@
-# Welcome to React Router!
+# Patient Medical Dashboard
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern patient medical dashboard built as a coding challenge. This application allows healthcare professionals to view comprehensive patient information in an intuitive interface.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+**Created by:** Eric Luttenegger  
+**Project Type:** Coding Challenge - Given the designs, tasked to code and add functionality
 
-## Features
+🌐 **[Live Demo](https://dellobos.github.io/react-dashboard/)**
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🏥 About This Project
 
-## Getting Started
+This patient medical dashboard provides healthcare professionals with a comprehensive view of patient information. Users can click on any patient from the patient list to view detailed medical information including diagnosis history, diagnostic status, lab results, and personal information.
+
+## ⚡ Tech Stack
+
+- **React** - UI library for building interactive interfaces
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript for better development experience
+- **SCSS** - Enhanced CSS with variables, nesting, and mixins
+- **React Router** - Client-side routing for navigation
+
+## 🔋 Features
+
+- **Patient Selection** - Click on any patient to view their detailed information
+- **Diagnosis History** - View vital signs including:
+  - Blood pressure readings with trend indicators
+  - Temperature measurements
+  - Respiratory rate monitoring
+  - Visual indicators for above/below average values
+- **Diagnostic List** - Current health problems and their status
+- **Lab Results** - Comprehensive laboratory test results
+- **Patient Information** - Complete patient profile including:
+  - Age, gender, and contact information
+  - Insurance provider details
+  - Patient photo
+- **Responsive Design** - Optimized for desktop and tablet devices
+- **Mock API Integration** - Uses mock data for demonstration and stability
+
+## � Device Support
+
+- ✅ **Desktop** - Full functionality and optimized layout
+- ✅ **Tablet** - Responsive design adapted for tablet screens
+- ⚠️ **Mobile** - Not optimized (due to condensed information requirements)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine (version 16 or higher recommended).
 
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd patient-medical-dashboard
+```
 
+2. Install the dependencies:
 ```bash
 npm install
 ```
 
 ### Development
 
-Start the development server with HMR:
+Start the development server with Hot Module Replacement (HMR):
 
 ```bash
 npm run dev
@@ -34,7 +71,7 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+## 🏗️ Building for Production
 
 Create a production build:
 
@@ -42,17 +79,17 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## 🐳 Deployment
 
 ### Docker Deployment
 
 To build and run using Docker:
 
 ```bash
-docker build -t my-app .
+docker build -t patient-dashboard .
 
 # Run the container
-docker run -p 3000:3000 my-app
+docker run -p 3000:3000 patient-dashboard
 ```
 
 The containerized application can be deployed to any platform that supports Docker, including:
@@ -78,10 +115,14 @@ Make sure to deploy the output of `npm run build`
 │   └── server/    # Server-side code
 ```
 
-## Styling
+## 🎨 Styling
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project uses SCSS for styling, providing enhanced CSS capabilities including variables, nesting, and mixins for maintainable stylesheets.
+
+## 📊 Data Source
+
+The application uses a mock API for demonstration purposes, ensuring stability and consistent data for showcasing the dashboard's capabilities.
 
 ---
 
-Built with ❤️ using React Router.
+**Portfolio Project** - Showcasing modern React development skills and responsive design principles.
