@@ -6,6 +6,6 @@ export default {
   ssr: false, // Enable SPA mode for GitHub Pages
   // Add prerender configuration for static generation
   prerender: ["/"], // Prerender the home page
-  // Set the basename for GitHub Pages
-  basename: "/react-dashboard",
+  // Set the basename for GitHub Pages - must match Vite base in production
+  basename: process.env.NODE_ENV === 'production' ? "/react-dashboard" : "/",
 } satisfies Config;
