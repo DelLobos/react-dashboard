@@ -2,6 +2,7 @@ import React from "react";
 import "./MainNavigation.scss";
 // You can use react-icons or your own SVGs
 import { FaEllipsisV } from "react-icons/fa";
+import { getAssetPath } from "../../utils/assetPath";
 
 export function MainNavigation({ isTablet }: { isTablet: boolean }) {
   return (
